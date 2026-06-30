@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import earthAsset from "../../assets/earth-bluemarble.jpg.asset.json";
+import earth from "../../assets/earth-bluemarble.jpg";
+import cloud from "../../assets/earth-clouds.png";
 import cloudsAsset from "../../assets/earth-clouds.png.asset.json";
-const earthMap = earthAsset.url;
-const cloudsMap = cloudsAsset.url;
+const earthMap = earth;
+const cloudsMap = cloud;
 
 type City = { name: string; lat: number; lon: number };
 const CITIES: City[] = [
