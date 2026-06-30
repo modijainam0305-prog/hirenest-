@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import logoAsset from "../../assets/hirenest-logo-mark.png.asset.json";
+import logo from "../../assets/logo.png";
+
 
 export function Footer() {
   return (
@@ -10,7 +12,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
               <img
-                src={logoAsset.url}
+                src={logo}
                 alt="HireNest Global"
                 className="h-10 w-10 object-contain drop-shadow-[0_2px_12px_rgba(80,140,255,0.35)]"
               />
