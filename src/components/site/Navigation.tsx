@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import logoAsset from "../../assets/hirenest-logo-mark.png.asset.json";
+import logo from "../../assets/logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -38,7 +39,7 @@ export function Navigation() {
         >
           <Link to="/" className="flex items-center gap-2.5 group" aria-label="HireNest Global">
             <img
-              src={logoAsset.url}
+              src={logo}
               alt="HireNest Global"
               className="h-9 w-9 md:h-10 md:w-10 object-contain drop-shadow-[0_2px_10px_rgba(80,140,255,0.35)] transition-transform duration-500 group-hover:scale-105"
             />

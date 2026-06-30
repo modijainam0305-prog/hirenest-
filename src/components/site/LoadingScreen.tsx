@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import logoAsset from "../../assets/hirenest-logo-mark.png.asset.json";
+import logo from "../../assets/logo.png";
 
 export function LoadingScreen() {
   const [done, setDone] = useState(false);
@@ -36,7 +37,7 @@ export function LoadingScreen() {
 
           <div className="relative flex flex-col items-center">
             <motion.img
-              src={logoAsset.url}
+              src={logo}
               alt="HireNest Global"
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
