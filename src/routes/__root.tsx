@@ -9,7 +9,8 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import favicon from "../assets/hirenest-logo-mark.png";
+import favicon from "../assets/logo.png";
+//import favicon from "../assets/hirenest-logo-mark.png";
 //import logoAsset from "../assets/hirenest-logo-mark.png.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navigation } from "../components/site/Navigation";
