@@ -9,7 +9,8 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import logoAsset from "../assets/hirenest-logo-mark.png.asset.json";
+import favicon from "../assets/hirenest-logo-mark.png";
+//import logoAsset from "../assets/hirenest-logo-mark.png.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navigation } from "../components/site/Navigation";
 import { Footer } from "../components/site/Footer";
@@ -81,8 +82,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: logoAsset.url },
     ],
     links: [
-      { rel: "icon", type: "image/png", href: logoAsset.url },
-      { rel: "apple-touch-icon", href: logoAsset.url },
+     // { rel: "icon", type: "image/png", href: logoAsset.url },
+     // { rel: "apple-touch-icon", href: logoAsset.url },
+      { rel: "icon", type: "image/png", href: favicon },
+      { rel: "apple-touch-icon", href: favicon },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
