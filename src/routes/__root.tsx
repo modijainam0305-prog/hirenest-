@@ -9,7 +9,8 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import logoAsset from "../assets/hirenest-logo-mark.png.asset.json";
+const logo = "/logo.png";
+//import logoAsset from "../assets/hirenest-logo-mark.png.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navigation } from "../components/site/Navigation";
 import { Footer } from "../components/site/Footer";
@@ -76,13 +77,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "HireNest Global — Premium International Recruitment" },
       { property: "og:description", content: "Connecting world-class companies with elite global talent across seven continents." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: logoAsset.url },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: logoAsset.url },
+      { property: "og:image", content: "https://www.hirenestgloball.com/logo.png" },
+       { name: "twitter:image", content: "https://www.hirenestgloball.com/logo.png" },
+     // { property: "og:image", content: logoAsset.url },
+      //{ name: "twitter:card", content: "summary_large_image" },
+      //{ name: "twitter:image", content: logoAsset.url },
     ],
-   links: [
-      { rel: "icon", type: "image/png", href: logoAsset.url },
-      { rel: "apple-touch-icon", href: logoAsset.url },
+links: [
+  { rel: "stylesheet", href: appCss },
+  { rel: "icon", href: "/favicon.ico" },
+  { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+  { rel: "manifest", href: "/site.webmanifest" },
+  { rel: "preconnect", href: "https://fonts.googleapis.com" },
+  { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap",
+  },
+]
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
