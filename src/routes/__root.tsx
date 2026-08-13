@@ -18,7 +18,6 @@ import { LoadingScreen } from "../components/site/LoadingScreen";
 import { SmoothScroll } from "../components/site/SmoothScroll";
 import { ScrollProgress } from "../components/site/ScrollProgress";
 import { CursorGlow } from "../components/site/CursorGlow";
-import { CursorDot } from "../components/site/CursorDot";
 import { PageTransition } from "../components/site/PageTransition";
 
 function NotFoundComponent() {
@@ -123,7 +122,6 @@ function RootComponent() {
       <SmoothScroll />
       <ScrollProgress />
       <CursorGlow />
-      <CursorDot />
       <Navigation />
       <PageTransition>
         <Outlet />
