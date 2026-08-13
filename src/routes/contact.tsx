@@ -114,7 +114,12 @@ function Contact() {
     } catch (err) {
       console.error("EmailJS send failed:", err);
       const text = err && typeof err === "object" && "text" in err ? String(err.text) : "";
-      setErrorMessage(text || "Something went wrong. Please try again or email us directly.");
+      const needsReconnect = /invalid grant|reconnect your gmail/i.test(text);
+      setErrorMessage(
+        needsReconnect
+          ? "Mail delivery is temporarily unavailable. Please email us directly at info@hirenestgloball.com."
+          : text || "Something went wrong. Please try again or email us directly.",
+      );
       setStatus("error");
     }
   }
