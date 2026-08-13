@@ -71,7 +71,7 @@ export function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-4">Contact</h4>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
-              <li><a href="mailto:info@hirenestglobal.com" className="hover:text-foreground">info@hirenestglobal.com</a></li>
+              <li><a href="mailto:info@hirenestgloball.com" className="hover:text-foreground">info@hirenestgloball.com</a></li>
               <li><a href="tel:+13073128503" className="hover:text-foreground">+1 307 312 8503</a></li>
               <li>30 N Gould St Ste R<br />Sheridan, WY 82801, USA</li>
             </ul>
