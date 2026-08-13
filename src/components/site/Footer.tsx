@@ -1,7 +1,25 @@
 import { Link } from "@tanstack/react-router";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import logoAsset from "../../assets/hirenest-logo-mark.png.asset.json";
 import logo from "../../assets/logo.png";
 
+const socials = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/hirenest-globall/",
+    icon: Linkedin,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/hirenestglobal",
+    icon: Instagram,
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/share/1Bi5gdGHpA/",
+    icon: Facebook,
+  },
+] as const;
 
 export function Footer() {
   return (
@@ -24,6 +42,20 @@ export function Footer() {
               A boutique international recruitment partner connecting world-class
               companies with exceptional talent across six global markets.
             </p>
+            <div className="mt-6 flex items-center gap-3">
+              {socials.map(({ name, href, icon: Icon }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={name}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-muted-foreground transition hover:border-[oklch(0.82_0.14_85_/_0.45)] hover:text-[oklch(0.82_0.14_85)]"
+                >
+                  <Icon size={16} strokeWidth={1.6} />
+                </a>
+              ))}
+            </div>
           </div>
 
           <div>
