@@ -3,6 +3,11 @@ import { useState, type FormEvent, type ReactNode } from "react";
 import { PageHero, Reveal } from "../components/site/Reveal";
 import { Magnetic } from "../components/site/MagneticButton";
 import {
+  EMAILJS_PUBLIC_KEY,
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+} from "../lib/emailjs";
+import {
   Mail,
   Phone,
   MapPin,
@@ -76,9 +81,9 @@ function Contact() {
       return;
     }
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const serviceId = EMAILJS_SERVICE_ID;
+    const templateId = EMAILJS_TEMPLATE_ID;
+    const publicKey = EMAILJS_PUBLIC_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
       console.error("EmailJS env vars are missing. Set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY.");
