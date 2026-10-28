@@ -106,6 +106,7 @@ function Contact() {
           from_email: String(data.get("email") ?? ""),
           name: String(data.get("name") ?? ""),
           email: String(data.get("email") ?? ""),
+          phone: String(data.get("phone") ?? ""),
           country: String(data.get("country") ?? ""),
           topic,
           message: String(data.get("message") ?? ""),
@@ -193,7 +194,17 @@ function Contact() {
                       required
                       disabled={status === "sending"}
                     />
-                    <div className="sm:col-span-2">
+                    <Field
+                      label="Phone number"
+                      name="phone"
+                      type="tel"
+                      autoComplete="tel"
+                      placeholder="+1 555 000 0000"
+                      icon={<Phone size={15} strokeWidth={1.6} />}
+                      required
+                      disabled={status === "sending"}
+                    />
+                    <div>
                       <label htmlFor="country" className="block text-[11px] uppercase tracking-[0.25em] text-muted-foreground mb-2">
                         Country
                       </label>
